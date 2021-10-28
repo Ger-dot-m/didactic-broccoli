@@ -9,7 +9,8 @@ class filesScreen extends StatefulWidget {
 }
 
 class _filesScreen extends State<filesScreen> {
-  int count = 0;
+  int count = 1;
+  String titulo = "";
   List<Widget> files = [];
 
   @override
@@ -36,9 +37,8 @@ class _filesScreen extends State<filesScreen> {
   }
 
   ListTile fileTile(int num){
-    String numero = num.toString();
     return ListTile(
-      title: Text('Archivo ' + numero),
+      title: Text(titulo),
 
       onTap: (){
         Navigator.push(
@@ -52,6 +52,38 @@ class _filesScreen extends State<filesScreen> {
   }
 
   void _addFile(){
+    showDialog<String>(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        title: const Text('Nuevo proyecto'),
+        content: const Text('Nombre del nuevo proyecto'),
+        actions: <Widget>[
+          TextFormField(
+            onChanged: (texto){
+              titulo = texto;
+            },
+            decoration: const InputDecoration(
+              border: UnderlineInputBorder(),
+            ),
+          ),
+          Row(
+            children: [
+              TextButton(
+                onPressed: () => Navigator.pop(context, 'Cancel'),
+                child: const Text('Cancel'),
+              ),
+              TextButton(
+                onPressed: _newState,
+                child: const Text('OK'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+  void _newState(){
+    Navigator.pop(context, 'OK');
     setState(() {
       files.add(fileTile(count));
       count += 1;

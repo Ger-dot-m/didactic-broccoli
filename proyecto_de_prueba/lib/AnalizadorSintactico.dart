@@ -9,7 +9,7 @@ class AnalizadorSintactico {
         }
       }
     }
-    return [];
+    return [-1,-1];
   }
 
   String extrae(String entrada, int pos_j) {
