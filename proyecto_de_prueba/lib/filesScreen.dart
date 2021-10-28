@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'MenuText.dart';
 
 class filesScreen extends StatefulWidget {
   const filesScreen({Key? key}) : super(key: key);
@@ -37,15 +38,24 @@ class _filesScreen extends State<filesScreen> {
   ListTile fileTile(int num){
     String numero = num.toString();
     return ListTile(
-      title: Text('Archivo '+numero),
-      onTap: (){},
+      title: Text('Archivo ' + numero),
+
+      onTap: (){
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) {
+            return MenuText();
+          }),
+        );
+      },
     );
   }
+
   void _addFile(){
     setState(() {
       files.add(fileTile(count));
       count += 1;
     });
   }
-
 }
+
