@@ -1,4 +1,8 @@
 class AnalizadorSintactico {
+
+  var etiquetas = ["eqtn","text"];
+  final soluciones = Soluciones();
+
   List<int> etiqueta(String entrada) {
     for (int i = 0; i < entrada.length; i++) {
       if (entrada[i] == '<') {
@@ -18,5 +22,12 @@ class AnalizadorSintactico {
   }
   String getLabel(entrada, i,j) {
     return entrada.substring(i,j);
+  }
+
+}
+
+class Soluciones {
+  void inicia(){
+    print("INICIADO");
   }
 }
