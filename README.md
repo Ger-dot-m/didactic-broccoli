@@ -9,9 +9,8 @@ Esta aplicación es similar una calculadora especializada que evalúa mediante l
 La presentación es simple de entender, dos botones que dan las opciones para abrir notas guardadas o para comenzar a escribir una. También se puede usar la barra de navegación que hay en la parte inferior.
 
 ## Crear notas
-#### Se puede ver la lista de las notas guardadas 
+#### Se puede ver la lista de las notas guardadas. El botón para crear una es intuitivo, basta con introducir el nombre de la nota y presionar en "OK" para que esté guardada:
 ![](https://github.com/Ger-dot-m/didactic-broccoli/blob/main/Capturas%20de%20funcionamiento/image_2021-12-10_14-38-50.png)
-#### El botón para crear una es intuitivo, basta con introducir el nombre de la nota y presionar en "OK" para que esté guardada:
 ![](https://github.com/Ger-dot-m/didactic-broccoli/blob/main/Capturas%20de%20funcionamiento/image_2021-12-10_14-39-05.png)
 ![](https://github.com/Ger-dot-m/didactic-broccoli/blob/main/Capturas%20de%20funcionamiento/image_2021-12-10_14-39-25.png)
 ![](https://github.com/Ger-dot-m/didactic-broccoli/blob/main/Capturas%20de%20funcionamiento/image_2021-12-10_14-39-35.png)
