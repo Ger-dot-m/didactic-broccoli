@@ -53,6 +53,6 @@ Matriz inversa:
 ## Observaciones
 
 Fue un proyecto complicado en algunos aspectos, pero se siguió con el plan trazado al principio. El resultado luce diferente pero es similar a la idea propuesta al comienzo:
-![](https://www.figma.com/proto/9CSi1FgO2vClSYmCklZkY9/Proyecto-notas-de-funciones?node-id=5%3A61&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A2&show-proto-sidebar=1)
+> https://www.figma.com/proto/9CSi1FgO2vClSYmCklZkY9/Proyecto-notas-de-funciones?node-id=5%3A61&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A2&show-proto-sidebar=1
 
 Aún se pueden agregar más funcionalidades y dar más cuidado a la estética, pero el resultado de todo el trabajo realizado, es que se sentó una buena base para que este proyecto pueda escalar a algo más alto, complejo y potente en un futuro.
