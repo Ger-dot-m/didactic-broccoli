@@ -70,12 +70,13 @@ class _Pagina_01State extends State<Pagina_01> {
               child: TextButton(
                 style: TextButton.styleFrom(
                   primary: Colors.white,
+                    shadowColor: Colors.red,
+                    elevation: 10,
                   textStyle: const TextStyle(fontSize: 30),
                   backgroundColor: Colors.deepPurpleAccent,
                   padding: const EdgeInsets.all(20),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
-                  //minimumSize: Size(width, height),
-                  // alignment: Alignment(0, -1),
+
             ),
                 child: const Text(' Notas guardadas '),
                 onPressed: () {
@@ -91,15 +92,18 @@ class _Pagina_01State extends State<Pagina_01> {
               child: TextButton(
                 style: TextButton.styleFrom(
                   primary: Colors.white,
+                    shadowColor: Colors.red,
+                    elevation: 10,
                   textStyle: const TextStyle(fontSize: 30),
                   backgroundColor: Colors.green,
                   padding: const EdgeInsets.all(20),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
-
-                  //minimumSize: Size(width, height),
-              //alignment: Alignment(0, -1),
             ),
-                child: const Text('Interprete'),
+                child: Container(
+                  child: const Text("Interprete"),
+
+
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,

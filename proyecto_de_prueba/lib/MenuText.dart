@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tex/flutter_tex.dart';
 
 class MenuText extends StatefulWidget {
   String nombre = "", archivo = "";
@@ -15,7 +14,12 @@ class _MenuTextState extends State<MenuText> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text(nombre)),
+      backgroundColor: Colors.white,
+        appBar:
+        AppBar(
+            title: Text(nombre),
+          backgroundColor: Colors.deepPurpleAccent,
+        ),
         body: TextBox()
     );
   }
@@ -31,10 +35,10 @@ ListView TextBox(){
           autocorrect: false,
           cursorColor: Colors.red,
           cursorWidth: 3,
-          maxLines: 16,
+          maxLines: 10,
           decoration: InputDecoration(
             hintText: "Escribe aquí",
-            fillColor: Colors.blue[100],
+            fillColor: Colors.purple[150],
             filled: true,
           ),
         ),
@@ -45,26 +49,28 @@ ListView TextBox(){
         children: [
           TextButton(
             style: TextButton.styleFrom(
-              primary: Colors.black,
+              primary: Colors.white,
+              shadowColor: Colors.red,
+              elevation: 10,
               textStyle: const TextStyle(fontSize: 25),
-              backgroundColor: Colors.yellow,
+              backgroundColor: Colors.deepPurpleAccent,
               padding: const EdgeInsets.all(15),
-              //minimumSize: Size(width, height),
-              //alignment: Alignment(0, -1),
+
             ),
-            child: const Text('Nuevo bloque'),
+            child: Icon(Icons.add),
             onPressed: () {},
           ),
           TextButton(
             style: TextButton.styleFrom(
-              primary: Colors.black,
+              primary: Colors.white,
+              shadowColor: Colors.red,
+              elevation: 10,
               textStyle: const TextStyle(fontSize: 25),
-              backgroundColor: Colors.green,
+              backgroundColor: Colors.deepPurpleAccent,
               padding: const EdgeInsets.all(15),
-              //minimumSize: Size(width, height),
-              //alignment: Alignment(0, -1),
+
             ),
-            child: const Text('Ejecutar'),
+            child: Icon(Icons.arrow_forward_ios_rounded ),
             onPressed: () {},
           )
         ],
