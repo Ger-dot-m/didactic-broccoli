@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tex/flutter_tex.dart';
 import 'AnalizadorSintactico.dart';
 import 'Soluciones.dart';
 
@@ -31,16 +32,8 @@ class _Interprete extends State<Interprete> {
                 ),
                 initialValue: "<operacion> contenido"
             ),
-
             Row(
               children: [
-                TextButton(
-                  style: TextButton.styleFrom(
-                    textStyle: const TextStyle(fontSize: 20),
-                  ),
-                  onPressed: addText,
-                  child: Text('Añade'),
-                ),
                 TextButton(
                   style: TextButton.styleFrom(
                     textStyle: const TextStyle(fontSize: 20),
@@ -56,6 +49,7 @@ class _Interprete extends State<Interprete> {
                   child: Text('Ejecutar'),
                 )
               ],
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             ),
             ListView.builder(
                 scrollDirection: Axis.vertical,
@@ -63,17 +57,10 @@ class _Interprete extends State<Interprete> {
                 itemCount: dato_pantalla.length,
                 itemBuilder: (context, index) {
                   return dato_pantalla[index];
-                }),
+                })
+
           ],
         ));
-  }
-
-  void addText() {
-    objeto = analiza.getItem(dato);
-    String imprime = objeto[0]+": " + objeto[1];
-    setState(() {
-      dato_pantalla.add(Text(imprime));
-    });
   }
 
   void popText() {
@@ -83,7 +70,9 @@ class _Interprete extends State<Interprete> {
   }
 
   void ejecuta() {
-    String imprime = solucion.inicia(objeto[0], objeto[1]);
+    objeto = analiza.getItem(dato);
+    String imprime = objeto[0] + " de " + objeto[1] + ": ";
+    imprime += solucion.inicia(objeto[0], objeto[1]);
     setState(() {
       dato_pantalla.add(Text(imprime));
     });

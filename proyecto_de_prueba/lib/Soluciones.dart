@@ -13,8 +13,7 @@ class Soluciones {
   String inicia(String tipo, String entrada) {
     for (var item in etiquetas) {
       if (tipo == item) {
-        if (tipo == "text")
-          return Text(entrada);
+        if (tipo == "text") return Text(entrada);
         else if (tipo == "raiz") return Raiz(entrada);
       }
     }
@@ -27,19 +26,20 @@ class Soluciones {
     String salida ="$raiz";
     return salida;
   }
-  String Text(String dato) {return "";}
+
+  String Text(String dato) {return dato;}
 
   num secante(Expression f, num x0, num x1){
     num E = 0.00001, error = 1, xn = 0;
-    int i = 1;
     while( error > E){
+      cm1.bindVariable(x, Number(x0));
+      cm2.bindVariable(x, Number(x1));
       try{
         xn = x1-f.evaluate(EvaluationType.REAL, cm2)*(x1-x0)/(f.evaluate(EvaluationType.REAL, cm2)-f.evaluate(EvaluationType.REAL, cm1));
       } catch (e){break;}
       try{
         error = ((xn-x1)/xn).abs();
       } catch(e){break;}
-      i+=1;
       x0=x1;
       x1=xn;
     }
