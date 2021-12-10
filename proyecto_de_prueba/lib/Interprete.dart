@@ -99,7 +99,7 @@ class _Interprete extends State<Interprete> {
   }
 }
 
-TeXView muestra(){
+TeXView muestra(String entrada){
   return TeXView(
     child: TeXViewColumn(children: [
       TeXViewInkWell(

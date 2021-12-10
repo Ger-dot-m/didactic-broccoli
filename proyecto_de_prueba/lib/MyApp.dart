@@ -67,52 +67,58 @@ class _Pagina_01State extends State<Pagina_01> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Center(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  primary: Colors.white,
-                    shadowColor: Colors.red,
-                    elevation: 10,
-                  textStyle: const TextStyle(fontSize: 30),
-                  backgroundColor: Colors.deepPurpleAccent,
-                  padding: const EdgeInsets.all(20),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
+              child: SizedBox(
+                height: 100,
+                width: 300,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      shadowColor: Colors.red,
+                      elevation: 10,
+                      textStyle: const TextStyle(fontSize: 30),
+                      backgroundColor: Colors.deepPurpleAccent,
+                      padding: const EdgeInsets.all(20),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
 
-            ),
-                child: const Text(' Notas guardadas '),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return filesScreen();
-                    }),
-                  );},
-              ),
+                  ),
+                  child: const Text(' Notas guardadas '),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return filesScreen();
+                      }),
+                    );},
+                ),
+              )
             ),
             Center(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  primary: Colors.white,
-                    shadowColor: Colors.red,
-                    elevation: 10,
-                  textStyle: const TextStyle(fontSize: 30),
-                  backgroundColor: Colors.green,
-                  padding: const EdgeInsets.all(20),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
-            ),
-                child: Container(
-                  child: const Text("Interprete"),
-
-
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return Interprete();
-                    }),
-                  );
+              child: SizedBox(
+                height: 100,
+                width: 300,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      shadowColor: Colors.red,
+                      elevation: 10,
+                      textStyle: const TextStyle(fontSize: 30),
+                      backgroundColor: Colors.deepPurpleAccent,
+                      padding: const EdgeInsets.all(20),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
+                  ),
+                  child: Container(
+                    child: const Text("Interprete"),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return Interprete();
+                      }),
+                    );
                   },
-              ),
+                ),
+              )
             ),
           ],
         ),
