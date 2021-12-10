@@ -39,6 +39,6 @@ class AnalizadorSintactico {
         return [nombre, funcion];
       }
     }
-    return ["nulo", "nulo"];
+    return ["otro", entrada];
   }
 }

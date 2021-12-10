@@ -29,10 +29,10 @@ class _Interprete extends State<Interprete> {
           children: [
             Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.vertical(top: Radius.circular(10)) ,
                     color: Colors.white
                 ),
-            child:Column(
+                margin: EdgeInsets.symmetric(horizontal: 20.0),
+                child:Column(
               children: [
                 TextFormField(
                   onChanged: (texto) {
@@ -50,27 +50,29 @@ class _Interprete extends State<Interprete> {
                         textStyle: const TextStyle(fontSize: 20),
                       ),
                       onPressed: popText,
-                      child: Text('Borra'),
+                      child: Icon(Icons.delete),
                     ),
                     TextButton(
                       style: TextButton.styleFrom(
                         textStyle: const TextStyle(fontSize: 20),
                       ),
                       onPressed: ejecuta,
-                      child: Text('Ejecutar'),
+                      child: Icon(Icons.arrow_forward_ios_rounded ),
                     )
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                )],)
+                ),
+                ListView.builder(
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    itemCount: dato_pantalla.length,
+                    itemBuilder: (context, index) {
+                      return dato_pantalla[index];
+                    })
+              ],)
             ),
 
-            ListView.builder(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                itemCount: dato_pantalla.length,
-                itemBuilder: (context, index) {
-                  return dato_pantalla[index];
-                })
+
 
           ],
         )
@@ -85,8 +87,7 @@ class _Interprete extends State<Interprete> {
 
   void ejecuta() {
     objeto = analiza.getItem(dato);
-    String imprime = objeto[0] + " de " + objeto[1] + ": ";
-    imprime += solucion.inicia(objeto[0], objeto[1]);
+    String imprime = solucion.inicia(objeto[0], objeto[1]);
     setState(() {
       dato_pantalla.add(
         Container(
