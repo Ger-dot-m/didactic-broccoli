@@ -28,13 +28,7 @@ class _InicioState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text(
-            'Nombre de la App',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 25),
-          ),
-          backgroundColor: Colors.cyan[900]),
+      backgroundColor: Colors.deepPurpleAccent,
       body: _paginas[_pagina_actual],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
@@ -63,53 +57,61 @@ class Pagina_01 extends StatefulWidget {
 class _Pagina_01State extends State<Pagina_01> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Center(
-          child: TextButton(
-            style: TextButton.styleFrom(
-              primary: Colors.white70,
-              textStyle: const TextStyle(fontSize: 30),
-              backgroundColor: Colors.blueGrey,
-              padding: const EdgeInsets.all(20),
-              //minimumSize: Size(width, height),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)) ,
+        color: Colors.white
+      ),
+      margin: EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Center(
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  primary: Colors.white,
+                  textStyle: const TextStyle(fontSize: 30),
+                  backgroundColor: Colors.deepPurpleAccent,
+                  padding: const EdgeInsets.all(20),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
+                  //minimumSize: Size(width, height),
+                  // alignment: Alignment(0, -1),
+            ),
+                child: const Text(' Notas guardadas '),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return filesScreen();
+                    }),
+                  );},
+              ),
+            ),
+            Center(
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  primary: Colors.white,
+                  textStyle: const TextStyle(fontSize: 30),
+                  backgroundColor: Colors.green,
+                  padding: const EdgeInsets.all(20),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
+
+                  //minimumSize: Size(width, height),
               //alignment: Alignment(0, -1),
             ),
-            child: const Text(' Notas guardadas '),
-            onPressed: () {
-              Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) {
-
-                return filesScreen();
-              }),
-            );},
-          ),
-        ),
-        Center(
-          child: TextButton(
-            style: TextButton.styleFrom(
-              primary: Colors.white70,
-              textStyle: const TextStyle(fontSize: 30),
-              backgroundColor: Colors.green[800],
-              padding: const EdgeInsets.all(20),
-              //minimumSize: Size(width, height),
-              //alignment: Alignment(0, -1),
+                child: const Text('Interprete'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return Interprete();
+                    }),
+                  );
+                  },
+              ),
             ),
-            child: const Text('Interprete'),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-
-                  return Interprete();
-                }),
-              );
-            },
-          ),
+          ],
         ),
-      ],
     );
   }
 }

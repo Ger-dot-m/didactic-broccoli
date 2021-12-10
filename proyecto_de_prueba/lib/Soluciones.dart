@@ -1,8 +1,6 @@
 import 'package:math_expressions/math_expressions.dart';
 
 class Soluciones {
-  List stackTipes = [];
-  List stackData = [];
   Variable x = Variable('x');
   Parser p = Parser();
   ContextModel cm1 = ContextModel();
@@ -44,9 +42,5 @@ class Soluciones {
       x1=xn;
     }
     return xn;
-  }
-  void addPila(String tipo, String entrada){
-    stackTipes.add(tipo);
-    stackData.add(entrada);
   }
 }
