@@ -28,16 +28,16 @@ Para raíz:
 - \<raiz>k,funcion  // Da la raiz empezando en el intervalo k,k+1
 
 Para texto:
-\<text>TEXTO // Regresa sólo el texto
+- \<text>TEXTO // Regresa sólo el texto
 
 Para división sintética:
-\<divide>a1,a2,a3,...,an/k // ai representa los coeficientes de xn hasta x0, y son divididos por k
+- \<divide>a1,a2,a3,...,an/k // ai representa los coeficientes de xn hasta x0, y son divididos por k
 
 Aritmética:
-23+1+3+14 // Sólo evalua la expresión aritmética. Si se le añade una x, esta se evalua en 0
+- 23+1+3+14 // Sólo evalua la expresión aritmética. Si se le añade una x, esta se evalua en 0
 
 Matriz inversa:
-\<inversa>a11,a12,a13,...;a21,a22,a23,...;... // Aqui lo importante es la sintaxis de entrada de la matriz, simplemente la inverte.
+- \<inversa>a11,a12,a13,...;a21,a22,a23,...;... // Aqui lo importante es la sintaxis de entrada de la matriz, simplemente la inverte.
 
 
 **El programa indica si hay errores**.
