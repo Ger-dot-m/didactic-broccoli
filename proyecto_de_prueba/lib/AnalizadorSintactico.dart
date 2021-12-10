@@ -1,7 +1,10 @@
 class AnalizadorSintactico {
-
-  var etiquetas = ["eqtn","text"];
-  final soluciones = Soluciones();
+  // "Limpia" la entrada, separandolo por tipo de operacion y el dato.
+  /* USO:
+    AnalizadorSintactico obj = new AnalizadorSintactico();
+    obj.getItem(entrada);
+    Regresa una lista: [etiqueta, contenido]
+  */
 
   List<int> etiqueta(String entrada) {
     for (int i = 0; i < entrada.length; i++) {
@@ -13,21 +16,29 @@ class AnalizadorSintactico {
         }
       }
     }
-    return [-1,-1];
+    return [-1, 0];
   }
 
-  String extrae(String entrada, int pos_j) {
+  List<String> getItem(String entrada) {
     int len = entrada.length;
-    return entrada.substring(pos_j + 1, len);
-  }
-  String getLabel(entrada, i,j) {
-    return entrada.substring(i,j);
+    List<int> obtiene = etiqueta(entrada);
+    if (obtiene[0] == -1) {
+      return asigna(entrada);
+    }
+    int i = obtiene[0];
+    int j = obtiene[1];
+
+    return [entrada.substring(i, j), entrada.substring(j + 1, len)];
   }
 
-}
-
-class Soluciones {
-  void inicia(){
-    print("INICIADO");
+  List<String> asigna(String entrada) {
+    for (int i = 0; i < entrada.length; i++) {
+      if (entrada[i] == '=') {
+        String nombre = entrada.substring(0, i - 1);
+        String funcion = entrada.substring(i + 1, entrada.length);
+        return [nombre, funcion];
+      }
+    }
+    return ["nulo", "nulo"];
   }
 }

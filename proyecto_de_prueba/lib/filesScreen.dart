@@ -37,32 +37,6 @@ class _filesScreen extends State<filesScreen> {
         ));
   }
 
-  @override
-  void initState() {
-    super.initState();
-    _loadFile().then((value) {
-      setState(() {
-        contenido = value;
-      });
-    });
-  }
-
-  Future<String> _loadFile() async {
-    return await rootBundle.loadString("assets/files/datos.txt");
-  }
-
-  Widget imprimeContenido(BuildContext context) {
-    return FutureBuilder<String>(
-        future: _loadFile(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return Text(snapshot.data!);
-          } else if (snapshot.hasError) {
-            return Text("$snapshot.error");
-          }
-          return CircularProgressIndicator();
-        });
-  }
 
   ListTile fileTile(int num){
     return ListTile(
@@ -118,7 +92,5 @@ class _filesScreen extends State<filesScreen> {
       files.add(fileTile(count));
       count += 1;
     });
-    print(contenido);
   }
 }
-
