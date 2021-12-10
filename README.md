@@ -24,8 +24,8 @@ Se debe indicar el tipo de operación que se desea realizar y después especific
 ![](https://github.com/Ger-dot-m/didactic-broccoli/blob/main/Capturas%20de%20funcionamiento/image_2021-12-10_14-40-16.png)
 
 Para raíz:
-\<raiz>funcion // Da la raiz empezando en el intervalo 0,1
-\<raiz>k,funcion  // Da la raiz empezando en el intervalo k,k+1
+- \<raiz>funcion // Da la raiz empezando en el intervalo 0,1
+- \<raiz>k,funcion  // Da la raiz empezando en el intervalo k,k+1
 
 Para texto:
 \<text>TEXTO // Regresa sólo el texto
