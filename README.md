@@ -57,4 +57,4 @@ Fue un proyecto complicado en algunos aspectos, pero se siguió con el plan traz
 Aún se pueden agregar más funcionalidades y dar más cuidado a la estética, pero el resultado de todo el trabajo realizado, es que se sentó una buena base para que este proyecto pueda escalar a algo más alto, complejo y potente en un futuro.
 
 ## Funcionamiento de la aplicación
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/2xw7m85dAb4)
+[![Watch the video](https://youtu.be/2xw7m85dAb4/maxresdefault.jpg)](https://youtu.be/2xw7m85dAb4)
