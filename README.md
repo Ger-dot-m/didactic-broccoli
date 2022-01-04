@@ -58,3 +58,6 @@ Aún se pueden agregar más funcionalidades y dar más cuidado a la estética, p
 
 ## Funcionamiento de la aplicación
 [![Watch the video](https://youtu.be/2xw7m85dAb4/maxresdefault.jpg)](https://youtu.be/2xw7m85dAb4)
+
+## Mejora del proyecto
+https://github.com/Ger-dot-m/Proyecto_notebook
